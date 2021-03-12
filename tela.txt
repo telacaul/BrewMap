@@ -1,2 +1,6 @@
-Today:
--fix html bugs
+Felicia - about-us.html
+Ian - localstorage-favorites
+Tela - index.html, style.css
+Rich - script.js, api.js
+
+
