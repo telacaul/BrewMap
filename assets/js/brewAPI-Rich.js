@@ -21,10 +21,11 @@ closeBtn.addEventListener("click", function() {
     modalEl.classList.remove("is-active");
 });
 
-closeBtmBottom.addEventListener("click", function() {
+closeBtnBottom.addEventListener("click", function() {
     modalEl.classList.remove("is-active");
 });
 
+// Function to fetch data
 function findBrewery(city) {
 
     let breweryAPI = "https://api.openbrewerydb.org/breweries?by_city=" + city;
@@ -34,9 +35,39 @@ function findBrewery(city) {
 
     // OpenBrewery API Section ------
     fetch(breweryAPI).then(response => response.json()).then(function(data) {
-        var labelsEl = document.querySelector("#brewery");
-        for (var i = 0; i < labelsEl.clientHeight; i++) {
+        var labelsEl = document.querySelectorAll("#brewery");
+        for (var i = 0; i < labelsEl.length; i++) {
             labelsEl[i].innerHTML = "";
+
+            // get Brew Name
+            var nameData = data[i].name;
+            var names = document.createElement("p");
+
+            names.innerHTML = "* Brewery: " + nameData;
+            labelsEl[i].append(names);
+
+            // get Brew Type
+            var type = data[i].brewery_type;
+            var brewType = document.createElement("h2");
+
+            brewType.innerHTML = "Type: " + type;
+            labelsEl[i].append(brewType);
+
+            //get Address
+            var address = data[i].street;
+            var brewAddy = document.createElement("h2");
+
+            brewAddy.innerHTML = "address: " + address;
+            labelsEl[i].append(brewAddy);
+
+            //get Website
+            var website = data[i].website_url;
+            var webAddress = document.createElement("a");
+            webAddress.classList.add("button", "is-white");
+            webAddress.setAttribute("href", website);
+            
+            webAddress.innerHTML = website;
+            labelsEl[i].append(webAddress);
 
         }
 
@@ -60,3 +91,4 @@ function findBrewery(city) {
         // console log to see data from API 
     });
 }
+
