@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrewMap</title>
+    <!-- <link rel="shortcut icon" href="./images/fav_icon.png" type="image/x-icon"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!--Top NAV SECTION-->
+    <section class="hero is-info is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../">
+                            <h2>BrewMap</h2>
+                            <img src="./assets/images/cheers.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </span>
+                                    <span>Home</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-heart"></i>
+                                    </span>
+                                    <span>Favorites</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-book"></i>
+                                    </span>
+                                    <span>About Us</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/landing.html">
+                                    <span class="icon">
+                                        <i class="fa fa-github"></i>
+                                    </span>
+                                    <span>View Source</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            </div>
+            <!--Main Content Section-->
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="column is-6 is-offset-3">
+                        <img src="./assets/images/cheers.png" alt="Logo" class="images">
+                        <h1 class="title">
+                            BrewMap
+                        </h1>
+                        <h2 class="subtitle">
+                            Finding the brews so you can cruise.
+                        </h2>
+                        <div class="box">
+                            <div class="field is-grouped">
+                                <p class="control is-expanded">
+                                    <input class="input" type="text" placeholder="Enter your city">
+                                </p>
+                                <p class="control">
+                                    <a class="button is-info" id="searchBtn">
+                                        Search
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Added Elements to show Modal and Data from APIs-->
+            <!--Modal Section-->
+            <div class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <p class="modal-card-title">BrewMap</p>
+                    <button class="delete" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <div class="columns">
+                        <!--Brewery Data Section-->
+                        <div class="column is-half">
+                            <label class="label" id="brewery"></label>
+                            <label class="label" id="brewery"></label>
+                            <label class="label" id="brewery"></label>
+                            <label class="label" id="brewery"></label>
+                            <label class="label" id="brewery"></label>
+                        </div>
+                        <!--Map Section-->
+                        <div class="column auto">
+                            <div class="map"></div>
+                        </div>
+                    </div>
+                  </section>
+                  <footer class="modal-card-foot">
+                    <button class="button is-success" id="close">Close</button>
+                    <!-- <button class="button">Cancel</button> -->
+                  </footer>
+                </div>
+            </div>
+    </section>
+
+
+    <!--Added scrip link below for bing maps-->
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+    <script async type="text/javascript" src="./assets/js/script.js"></script>
+</body>
+
+</html>
