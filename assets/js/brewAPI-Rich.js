@@ -43,7 +43,7 @@ function findBrewery(city) {
             var nameData = data[i].name;
             var names = document.createElement("p");
 
-            names.innerHTML = "* Brewery: " + nameData;
+            names.innerHTML = "* " + nameData;
             labelsEl[i].append(names);
 
             // get Brew Type
@@ -69,6 +69,20 @@ function findBrewery(city) {
             webAddress.innerHTML = website;
             labelsEl[i].append(webAddress);
 
+            // Dynamic Click Event Section
+            var lat = data[i].latitude;
+            var lon = data[i].longitude;
+            var barName = data[i].name;
+            var street = data[i].street;
+            names.dataset.lat = lat;
+            names.dataset.lon = lon;
+            names.dataset.barName = barName;
+            names.dataset.street = street;
+
+            names.addEventListener('click', function() {
+                GetMap(this.dataset.lat, this.dataset.lon, this.dataset.barName, this.dataset.street);
+            })
+
         }
 
 
@@ -92,7 +106,6 @@ function findBrewery(city) {
 
         // Bing Maps function ----
         function GetMap(latitude, longitude, barTitle, address) {
-
 
             // Code below is acquired from Bing Maps website
             var map = new Microsoft.Maps.Map('.map', {
