@@ -12,6 +12,19 @@ searchButton.addEventListener("click", function() {
     findBrewery(enterCity);
 });
 
+// clickable function for modal buttons
+modalBg.addEventListener("click", function() {
+    modalEl.classList.remove("is-active");
+});
+
+closeBtn.addEventListener("click", function() {
+    modalEl.classList.remove("is-active");
+});
+
+closeBtmBottom.addEventListener("click", function() {
+    modalEl.classList.remove("is-active");
+});
+
 function findBrewery(city) {
 
     let breweryAPI = "https://api.openbrewerydb.org/breweries?by_city=" + city;
