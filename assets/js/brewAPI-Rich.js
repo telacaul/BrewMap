@@ -89,6 +89,32 @@ function findBrewery(city) {
         
         fetch(mapAPI).then(response => response.json()).then(map => console.log("map", map));
         // console log to see data from API 
+
+        // Bing Maps function ----
+        function GetMap(latitude, longitude, barTitle, address) {
+
+
+            // Code below is acquired from Bing Maps website
+            var map = new Microsoft.Maps.Map('.map', {
+                credentials: mapKey,
+                center: new Microsoft.Maps.Location(latitude, longitude)
+            });
+            console.log("map", map);
+    
+            var center = map.getCenter();
+    
+            //Create custom Pushpin
+            var pin = new Microsoft.Maps.Pushpin(center, {
+                title: barTitle,
+                subTitle: address,
+                text: '!'
+            });
+    
+            //Add the pushpin to the map
+            map.entities.push(pin);
+        }
+
+        GetMap(lat, lon, barName, street);
     });
 }
 
