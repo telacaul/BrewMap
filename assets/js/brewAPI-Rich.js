@@ -1,3 +1,16 @@
+// Document variables
+var inputEl = document.querySelector(".input");
+var searchButton = document.querySelector("#searchBtn");
+var modalEl = document.querySelector(".modal");
+var modalBg = document.querySelector(".modal-background");
+var closeBtn = document.querySelector(".delete");
+var closeBtnBottom = document.querySelector("#close");
+
+searchButton.addEventListener("click", function() {
+    modalEl.classList.add("is-active");
+    var enterCity = inputEl.value.split("").join("");
+    findBrewery(enterCity);
+});
 
 function findBrewery(city) {
 
