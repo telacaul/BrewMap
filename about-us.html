@@ -2,42 +2,171 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/about.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrewMap</title>
+    <!-- <link rel="shortcut icon" href="./images/fav_icon.png" type="image/x-icon"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/about.css">
 </head>
+
+<body>
+    <!--Top NAV SECTION-->
+    <section class="hero is-info is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../">
+                            <h2>BrewMap</h2>
+                            <img src="./assets/images/cheers.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="./index.html">
+                                    <span class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </span>
+                                    <span>Home</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-heart"></i>
+                                    </span>
+                                    <span>Favorites</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="./about-us.html">>
+                                    <span class="icon">
+                                        <i class="fa fa-book"></i>
+                                    </span>
+                                    <span>About Us</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined"
+                                    href="https://harrisfd.github.io/portfolio-page/">
+                                    <span class="icon">
+                                        <i class="fa fa-github"></i>
+                                    </span>
+                                    <span>Felicia</span>
+                                </a>
+                                <a class="button is-white is-outlined" href="https://riosborne6.github.io/Portfolio/">
+                                    <span class="icon">
+                                        <i class="fa fa-github"></i>
+                                    </span>
+                                    <span>Ian</span>
+                                </a>
+                                <a class="button is-white is-outlined"
+                                    href="https://telacaul.github.io/caul-professional-portfolio/">
+                                    <span class="icon">
+                                        <i class="fa fa-github"></i>
+                                    </span>
+                                    <span>Tela </span>
+                                </a>
+                                <a class="button is-white is-outlined"
+                                    href="https://rbsantos-code.github.io/all-about-me/">
+                                    <span class="icon">
+                                        <i class="fa fa-github"></i>
+                                    </span>
+                                    <span>Rich</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--Main Content Section-->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <!-- Team Card Section -->
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-2by2">
+                            <img src="./assets/images/Beer Image.jpg" alt="Glass of Beer">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">John Smith</p>
+                                <p class="subtitle is-6">@johnsmith</p>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                            <a href="#">#css</a> <a href="#">#responsive</a>
+                            <br>
+                            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Added Elements to show Modal and Data from APIs-->
+            <!--Modal Section-->
+            <div class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">BrewMap</p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <div class="columns">
+                            <!--Brewery Data Section-->
+                            <div class="column is-half">
+                                <label class="label" id="brewery"></label>
+                                <label class="label" id="brewery"></label>
+                                <label class="label" id="brewery"></label>
+                                <label class="label" id="brewery"></label>
+                                <label class="label" id="brewery"></label>
+                            </div>
+                            <!--Map Section-->
+                            <div class="column auto">
+                                <div class="map"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button is-success" id="close">Close</button>
+                        <!-- <button class="button">Cancel</button> -->
+                    </footer>
+                </div>
+            </div>
+    </section>
+
+
+    <!--Added scrip link below for bing maps-->
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+    <script async type="text/javascript" src="./assets/js/api.js"></script>
+</body>
+
+</html>
 
 <body>
     <img src="https://via.placeholder.com/300" alt="placeholder">
     <img src="https://via.placeholder.com/300" alt="placeholder">
     <img src="https://via.placeholder.com/300" alt="placeholder">
     <img src="https://via.placeholder.com/300" alt="placeholder">
-    <!-- Team Card Section -->
-    <div class="card">
-        <div class="card-image">
-            <figure class="image is-4by3">
-                <img src="https://via.placeholder.com/300" alt="placeholder">
-            </figure>
-        </div>
-        <div class="card-content">
-            <div class="media">
-                <div class="media-content">
-                    <p class="title is-4">John Smith</p>
-                    <p class="subtitle is-6">@johnsmith</p>
-                </div>
-            </div>
 
-            <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                <a href="#">#css</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
