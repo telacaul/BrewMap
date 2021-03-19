@@ -90,10 +90,7 @@ function findBrewery(city) {
             names.dataset.street = street;
 
             names.addEventListener('click', function() {
-                GetMap(this.dataset.lat, this.dataset.lon, this.dataset.barName, this.dataset.street);
-
-                //local storage
-                localStorage.setItem("brew-data", JSON.stringify(this.dataset.barName));
+                GetMap(this.dataset.lat, this.dataset.lon, this.dataset.barName, this.dataset.street)
 
             })
 
