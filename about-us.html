@@ -2,42 +2,299 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/about.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrewMap</title>
+    <!-- <link rel="shortcut icon" href="./images/fav_icon.png" type="image/x-icon"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/about.css">
 </head>
 
 <body>
-    <img src="https://via.placeholder.com/300" alt="placeholder">
-    <img src="https://via.placeholder.com/300" alt="placeholder">
-    <img src="https://via.placeholder.com/300" alt="placeholder">
-    <img src="https://via.placeholder.com/300" alt="placeholder">
-    <!-- Team Card Section -->
-    <div class="card">
-        <div class="card-image">
-            <figure class="image is-4by3">
-                <img src="https://via.placeholder.com/300" alt="placeholder">
-            </figure>
+    <!--Top NAV SECTION-->
+    <section class="hero is-info is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="../">
+                            <h2>BrewMap About Us</h2>
+                            <img src="./assets/images/cheers.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="./index.html">
+                                    <span class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </span>
+                                    <span>Home</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="#">
+                                    <span class="icon">
+                                        <i class="fa fa-heart"></i>
+                                    </span>
+                                    <span>Favorites</span>
+                                </a>
+                            </span>
+                            <!-- <span class="navbar-item">
+                                <a class="button is-white is-outlined" href="./about-us.html">>
+                                    <span class="icon">
+                                        <i class="fa fa-book"></i>
+                                    </span>
+                                    <span>About Us</span>
+                                </a>
+                            </span> -->
+                            <span class="navbar-item">
+                                <a class="button is-white is-outlined"
+                                    href="https://harrisfd.github.io/portfolio-page/">
+                                    <span class="icon">
+                                        <i class="fa fa-github"></i>
+                                    </span>
+                                    <span>Felicia</span>
+                                </a>
+                                <a class="button is-white is-outlined" href="https://riosborne6.github.io/Portfolio/">
+                                    <span class="icon">
+                                        <i class="fa fa-github"></i>
+                                    </span>
+                                    <span>Ian</span>
+                                </a>
+                                <a class="button is-white is-outlined"
+                                    href="https://telacaul.github.io/caul-professional-portfolio/">
+                                    <span class="icon">
+                                        <i class="fa fa-github"></i>
+                                    </span>
+                                    <span>Tela </span>
+                                </a>
+                                <a class="button is-white is-outlined"
+                                    href="https://rbsantos-code.github.io/all-about-me/">
+                                    <span class="icon">
+                                        <i class="fa fa-github"></i>
+                                    </span>
+                                    <span>Rich</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
-        <div class="card-content">
-            <div class="media">
-                <div class="media-content">
-                    <p class="title is-4">John Smith</p>
-                    <p class="subtitle is-6">@johnsmith</p>
+        <!--Main Content Section-->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <!-- Team Card Section -->
+                <article class="message is-large">
+                    <div class="message-header">
+                        <p>Meet Our Team</p>
+                    </div>
+                    <div class="message-body">
+                        <div class="card is-fullheight">
+                            <img src="./assets/images/Beer Image.jpg" alt="Glass of Beer">
+
+                        </div>
+                </article>
+
+            </div>
+        </div>
+        </div>
+
+        </div>
+        </div>
+        </div>
+        <!--Added Elements to show Modal and Data from APIs-->
+        <!--Modal Section-->
+        <div class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">BrewMap</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="columns">
+                        <!--Brewery Data Section-->
+                        <div class="column is-half">
+                            <label class="label" id="brewery"></label>
+                            <label class="label" id="brewery"></label>
+                            <label class="label" id="brewery"></label>
+                            <label class="label" id="brewery"></label>
+                            <label class="label" id="brewery"></label>
+                        </div>
+                        <!--Map Section-->
+                        <div class="column auto">
+                            <div class="map"></div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success" id="close">Close</button>
+                    <!-- <button class="button">Cancel</button> -->
+                </footer>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Added scrip link below for bing maps-->
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+    <script async type="text/javascript" src="./assets/js/api.js"></script>
+</body>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" rel="stylesheet" />
+<div class="columns is-fullheight">
+    <article class="column is-2">
+        <div class="card is-fullheight">
+            <div class="card-image">
+                <figure class="image is-2by5">
+                    <img src="./assets/images/Tela.jpg" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="card-content">
+
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4">Tela Caul</p>
+
+                    </div>
+                </div>
+
+                <div class="content">
+                    HIGH SCHOOL SCIENCE TEACHER & CONTENT LEAD. Passionate about digital tools to redefine education.
+
+                    <a></a>.
+                    <a href="#"></a> <a href="https://telacaul.github.io/caul-professional-portfolio/">Tela
+                        Caul-Professional Portfolio</a>
+                    <br>
+                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                 </div>
             </div>
+        </div>
+    </article>
+    <article class="column is-2">
+        <div class="card is-fullheight">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="./assets/images/Ian.png" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
 
-            <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                <a href="#">#css</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Ian Osborne</p>
+
+                    </div>
+                </div>
+
+                <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                    <a></a>
+                    <a href="https://riosborne6.github.io/Portfolio/">Ian's Professional Portfolio</a>
+                    <br>
+
+                    <body>
+                        <p id="demo"></p>
+                        <script>
+                            var d = new Date();
+                            document.getElementById("demo").innerHTML = d;
+                        </script>
+
+                    </body>
+                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                </div>
+            </div>
+    </article>
+
+    <article class="column is-2">
+        <div class="card is-fullheight">
+            <div class="card-image">
+                <figure class="image is-4by2">
+                    <img src="./assets/images/Felicia Harris Foster.jpg" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Felicia Harris-Foster</p>
+
+                    </div>
+                </div>
+
+                <div class="content">
+                    Instructional Designer/Education Consultant.Lifelong learner and passion for developing elearning
+                    courses.
+
+                    <a></a>
+                    <a href="#"></a> <a href="https://harrisfd.github.io/portfolio-page/">Felicia Harris-Foster's
+                        Professional Portfolio</a>
+
+                </div>
+            </div>
+    </article>
+    <article class="column is-2">
+        <div class="card is-fullheight">
+            <div class="card-image">
+                <figure class="image is-4by3">
+                    <img src="./assets/images/Rich.jpg" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">Rich Brian</p>
+
+                    </div>
+                </div>
+
+                <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                    <a></a>
+                    <a href="#"></a> <a href="https://rbsantos-code.github.io/all-about-me/">Rich Brian's Professional
+                        Portfolio</a>
+                    <br>
+
+                    <body>
+                        <p id="demo"></p>
+
+                        <script>
+                            var d = new Date();
+                            document.getElementById("demo").innerHTML = d;
+                        </script>
+
+                    </body>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+
+        <!-- </html>
+
+<body>
+
+    <img src="https://via.placeholder.com/300" alt="placeholder">
+    <img src="https://via.placeholder.com/300" alt="placeholder">
+    <img src="https://via.placeholder.com/300" alt="placeholder">
+    <img src="https://via.placeholder.com/300" alt="placeholder">
+
+</body> -->
 
 </html>
