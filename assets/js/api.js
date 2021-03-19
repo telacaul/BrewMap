@@ -63,10 +63,11 @@ function findBrewery(city) {
             //get Website
             var website = data[i].website_url;
             var webAddress = document.createElement("a");
-            webAddress.classList.add("button", "is-white");
+            webAddress.classList.add("button", "is-info");
+            webAddress.setAttribute("id", "websiteBtn");
             webAddress.setAttribute("href", website);
             
-            webAddress.innerHTML = website;
+            webAddress.innerHTML = "Website";
             labelsEl[i].append(webAddress);
 
             // Dynamic Click Event Section
