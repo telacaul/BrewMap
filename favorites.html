@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BrewMap</title>
+    <title>FavoriteBrew</title>
     <!-- <link rel="shortcut icon" href="./images/fav_icon.png" type="image/x-icon"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -42,7 +43,7 @@
                                 </a>
                             </span>
                             <span class="navbar-item">
-                                <a class="button is-white is-outlined" href="./favorites.html">
+                                <a class="button is-white is-outlined" href="#">
                                     <span class="icon">
                                         <i class="fa fa-heart"></i>
                                     </span>
@@ -76,21 +77,22 @@
                     <div class="column is-6 is-offset-3">
                         <img src="./assets/images/cheers.png" alt="Logo" class="images">
                         <h1 class="title">
-                            BrewMap
+                            FavoriteBrew
                         </h1>
                         <h2 class="subtitle">
-                            Finding the brews so you can cruise.
+                            Find your brew with your crew.
                         </h2>
                         <div class="box">
                             <div class="field is-grouped">
-                                <p class="control is-expanded">
-                                    <input class="input" type="text" 
-                                    placeholder="Enter your city">
-                                    <!--Changed placeholder to fit user input-->
+                                <p class="control is-expanded fav-section ">
+                                    <p class="container has-text-left favorites"></p>
                                 </p>
-                                <p class="control">
-                                    <a class="button is-info" id="searchBtn">
-                                        Search
+                                <p class="control rows">
+                                    <a class="button is-info" id="showBtn">
+                                        Show
+                                    </a>
+                                    <a class="button is-info" id="clearBtn">
+                                        Clear
                                     </a>
                                 </p>
                             </div>
@@ -98,44 +100,16 @@
                     </div>
                 </div>
             </div>
-            <!--Added Elements to show Modal and Data from APIs-->
-            <!--Modal Section-->
-            <div class="modal">
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                  <header class="modal-card-head">
-                    <p class="modal-card-title">BrewMap</p>
-                    <button class="delete" aria-label="close"></button>
-                  </header>
-                  <section class="modal-card-body">
-                    <div class="columns">
-                        <!--Brewery Data Section-->
-                        <div class="column is-half brew-data">
-                            <label class="label" id="brewery"></label>
-                            <label class="label" id="brewery"></label>
-                            <label class="label" id="brewery"></label>
-                            <label class="label" id="brewery"></label>
-                            <label class="label" id="brewery"></label>
-                        </div>
-                        <!--Map Section-->
-                        <div class="column auto">
-                            <div class="map"></div>
-                        </div>
-                    </div>
-                  </section>
-                  <footer class="modal-card-foot">
-                    <button class="button is-success" id="close">Close</button>
-                    <!-- <button class="button">Cancel</button> -->
-                  </footer>
-                </div>
-            </div>
+        
+            
     </section>
 
 
     <!--Added scrip link below for bing maps-->
     <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
-    <script async type="text/javascript" src="./assets/js/api.js"></script>
+    <!--favorites JS file-->
+    <script async type="text/javascript" src="./assets/js/favorites.js"></script>
 </body>
 
 </html>
