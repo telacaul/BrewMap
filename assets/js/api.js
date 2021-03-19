@@ -60,6 +60,15 @@ function findBrewery(city) {
             brewAddy.innerHTML = "address: " + address;
             labelsEl[i].append(brewAddy);
 
+            // Create Add Button to add to Local Storage
+
+            var localAdd = document.createElement("a");
+            localAdd.setAttribute("class", "button is-info");
+            localAdd.setAttribute("id", "localAddBtn");
+
+            localAdd.innerHTML = "Add";
+            labelsEl[i].append(localAdd);
+
             //get Website
             var website = data[i].website_url;
             var webAddress = document.createElement("a");
