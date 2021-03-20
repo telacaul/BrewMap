@@ -5,6 +5,7 @@ var modalEl = document.querySelector(".modal");
 var modalBg = document.querySelector(".modal-background");
 var closeBtn = document.querySelector(".delete");
 var closeBtnBottom = document.querySelector("#close");
+var favoritePlaces = []
 
 searchButton.addEventListener("click", function() {
     modalEl.classList.add("is-active");
@@ -65,7 +66,7 @@ function findBrewery(city) {
             var localAdd = document.createElement("a");
             localAdd.setAttribute("class", "button is-info");
             localAdd.setAttribute("id", "localAddBtn");
-
+localAdd.addEventListener("click", favarito)
             localAdd.innerHTML = "Add";
             labelsEl[i].append(localAdd);
 
@@ -141,5 +142,14 @@ function findBrewery(city) {
         GetMap(lat, lon, barName, street);
     });
 
+
+}
+function favarito(){
+ let address = $(this).parent().children().eq(2).text()
+ let placeName = $(this).parent().children().eq(0).text()
+favoritePlaces.push({
+    address,placeName
+})
+localStorage.setItem("favoritePlaces", JSON.stringify(favoritePlaces))
 
 }
