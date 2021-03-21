@@ -66,7 +66,10 @@ function findBrewery(city) {
             var localAdd = document.createElement("a");
             localAdd.setAttribute("class", "button is-info");
             localAdd.setAttribute("id", "localAddBtn");
-localAdd.addEventListener("click", favarito)
+
+            // localAdd.addEventListener("click", favarito)
+            // commenting out Ian's code for time being
+            
             localAdd.innerHTML = "Add";
             labelsEl[i].append(localAdd);
 
@@ -93,7 +96,26 @@ localAdd.addEventListener("click", favarito)
             names.addEventListener('click', function() {
                 GetMap(this.dataset.lat, this.dataset.lon, this.dataset.barName, this.dataset.street)
 
-            })
+            });
+
+            // Adding Add Button Even and Local Storage
+            
+            localAdd.dataset.barName = barName;
+
+            localAdd.addEventListener("click", function() {
+
+                var namesValue = [this.dataset.barName];
+                console.log("namesValue", namesValue);
+
+                var namesArray = JSON.parse(localStorage.getItem("brew-name")) || [];
+                console.log("namesArray", namesArray);
+                // console logging to see data
+
+                namesArray.push(namesValue);
+
+                // set to Local Storage
+                localStorage.setItem("brew-name", JSON.stringify(namesArray));
+            });
 
         }
 
