@@ -1,5 +1,6 @@
 let favoritePlaces = JSON.parse(localStorage.getItem("favoritePlaces"))
 let ulPlaces = $("#places")
+// Ian's code above
 
 
 // Place-holder code below for appending localStorage
@@ -19,3 +20,21 @@ function ShowBrew() {
         favSectionEl.append(favBrew);
     }
 }
+
+// BUTTON FUNCTION SECTION ----------------------
+
+// clear button section
+var clearBtn = document.querySelector("#clearBtn");
+
+clearBtn.addEventListener("click", function() {
+    localStorage.clear();
+    favorites = [];
+    favSectionEl.innerHTML = "";
+})
+
+// Show button section
+var showBtn = document.querySelector("#showBtn");
+
+showBtn.addEventListener("click", function() {
+    ShowBrew();
+})
