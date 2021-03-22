@@ -1,3 +1,0 @@
-linked about us html to the index.html
-setup the html page for the about us.html. 
-added css file for the about us page with assistance from tutor

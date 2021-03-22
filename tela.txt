@@ -1,7 +1,0 @@
-Felicia - about-us.html
-Ian - localstorage-favorites
-Tela - index.html, style.css
-Rich - script.js, api.js
-
-Location of Bulma Template 
-https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/landing.html

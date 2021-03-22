@@ -1,4 +1,0 @@
-Felicia=readme
-Ian=readme
-Tela=readme
-Rich=readme
