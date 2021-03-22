@@ -5,13 +5,13 @@ The pandemic is finally over, your friends are all vaccinated and it’s time to
 
 BrewMap is here to help! 
 
-### Frong-End Development
+### Front-End Development
 The BrewMap project uses two server-side APIs to allow the user to locate breweries in a given city. The user is given an option to view the brewery website and/or add the brewery to favorites. The favorites tab uses client-side storage to list breweries added, persisting upon refresh. Users can clear their favorites at any time. 
 
 ## Technologies Used
 * HTML
 * CSS 
-* CSS Framework[(Bluma)](https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/landing.html)
+* CSS Framework[(Bulma)](https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/landing.html)
 * JavaScript
 * Client-side local storage
 * Server-side APIs (Open Brewery and Bing Maps)
@@ -20,14 +20,14 @@ The BrewMap project uses two server-side APIs to allow the user to locate brewer
 
 ## Screenshots
 ![BrewMap Home](./assets/images/brewmap-home.png)
-![BrewMap Functionality](./assets/images/brewmap-functionality)
-![BrewMap Favorites](./assets/images/brewmap-favorites)
+![BrewMap Functionality](./assets/images/brewmap-functionality.png)
+![BrewMap Favorites](./assets/images/brewmap-favorites.png)
 
 ## Launch
-Try out our application here:[BrewMap](https://telacaul.github.io/BrewMap/)
+Try out our application here: [BrewMap](https://telacaul.github.io/BrewMap/)
 
 ## About Us
-* [Tela Caul](https://telacaul.github.io/professional-porfolio/)
-* [Felicia Harris-Foster](https://)
-* [Rich Brian Santos](https://)
-* [Ian Osborne](https://)
+* [Tela Caul](https://telacaul.github.io/caul-professional-portfolio/)
+* [Felicia Harris-Foster](https://harrisfd.github.io/portfolio-page/)
+* [Rich Brian Santos](https://rbsantos-code.github.io/all-about-me/)
+* [Ian Osborne](https://riosborne6.github.io/Portfolio/)
