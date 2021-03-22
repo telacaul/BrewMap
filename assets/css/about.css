@@ -3,3 +3,11 @@
 .card .card-image .image img {
   height: 200px;
 }
+
+.around{
+    justify-content: space-around;
+}
+
+.full {
+    width: 100%;
+}
