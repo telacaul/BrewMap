@@ -132,7 +132,7 @@ function findBrewery(city) {
         var mapKey = "Ava6c7xEN-FISpqll60LNKEhdYNkr0RGC2jZoFb2l02vg2lTmQ3aLT8BFWivGKEO";
 
         // API link
-        let mapAPI = `http://dev.virtualearth.net/REST/v1/Locations?countryRegion=us&postalCode=${postalCode}&addressLine=${street}&maxResults=5&key=${mapKey}`;
+        let mapAPI = `https://dev.virtualearth.net/REST/v1/Locations?countryRegion=us&postalCode=${postalCode}&addressLine=${street}&maxResults=5&key=${mapKey}`;
 
         
         fetch(mapAPI).then(response => response.json()).then(map => console.log("map", map));
