@@ -117,7 +117,7 @@ function findBrewery(city) {
                 localStorage.setItem("brew-name", JSON.stringify(namesArray));
             });
 
-        }
+        
 
 
         // Bing Maps API Section ------
@@ -162,8 +162,8 @@ function findBrewery(city) {
         }
 
         GetMap(lat, lon, barName, street);
+    }
     });
-
 
 }
 function favarito(){
